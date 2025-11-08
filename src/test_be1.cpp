@@ -361,8 +361,7 @@ TEST_CASE("scan_accts_phone_with_prefix", "[scanners]") {
 // CREDIT CARD TESTS (Multiple REGEX patterns)
 // ============================================================================
 
-TEST_CASE("scan_accts_ccn_visa_16digit", "[scanners]") {
-    // REGEX5: [3-6]([0-9]{15,18})
+TEST_CASE("scan_accts_ccn_visa", "[scanners]") {
     // Tests valid_ccn() function (Luhn validation)
     auto *sbuf = new sbuf_t("Payment: 4532015112830366");
     auto outdir = test_scanner(scan_accts, sbuf);
