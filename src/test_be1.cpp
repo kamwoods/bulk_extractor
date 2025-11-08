@@ -363,7 +363,7 @@ TEST_CASE("scan_accts_phone_with_prefix", "[scanners]") {
 
 TEST_CASE("scan_accts_ccn_visa", "[scanners]") {
     // Tests valid_ccn() function (Luhn validation)
-    auto *sbuf = new sbuf_t("Payment: 4532015112830366");
+    auto *sbuf = new sbuf_t("Card: 4532015112830366");
     auto outdir = test_scanner(scan_accts, sbuf);
     auto ccn_txt = getLines(outdir / "ccn.txt");
     
